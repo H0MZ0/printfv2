@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check.c                                         :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 18:31:33 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/26 18:40:43 by hakader          ###   ########.fr       */
+/*   Created: 2024/11/26 18:41:17 by hakader           #+#    #+#             */
+/*   Updated: 2024/11/26 21:23:33 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_check(char *src)
+int	ft_puthexa(unsigned int nb, char *base)
 {
-	int	i;
-
-	i = 0;
-	if (src[i] == '%')
+	if (nb == 0)
 	{
-		i++;
-		if (src[i] == 'c')
-			ft_putchar(&src);
-		if (src[i] == 's')
-			ft_putstr(*src);
-		if (src[i] == 'p')
-		if (src[i] == 'd')
-			ft_putnbr(src);
-		if (src[i] == 'i')
-		if (src[i] == 'u')
-			ft_putunbr(src);
-		if (src[i] == 'x')
-		if (src[i] == 'X')
-		if (src[i] == '%')
-			ft_putchar('%');
+		ft_putchar(48);
+		return (1);
 	}
+	else
+	{
+		ft_puthexa(nb / 16, base);
+		ft_puthexa(nb * 16, base);
+	}
+	return (ft_hexalen(nb));
 }
