@@ -6,13 +6,13 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:31:33 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/26 18:40:43 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/26 21:33:07 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_check(char *src)
+void ft_check(char *src)
 {
 	int	i;
 
@@ -28,10 +28,13 @@ int ft_check(char *src)
 		if (src[i] == 'd')
 			ft_putnbr(src);
 		if (src[i] == 'i')
+			ft_putunbr(src);
 		if (src[i] == 'u')
 			ft_putunbr(src);
 		if (src[i] == 'x')
+			ft_puthexa();
 		if (src[i] == 'X')
+			ft_puthexa();
 		if (src[i] == '%')
 			ft_putchar('%');
 	}
