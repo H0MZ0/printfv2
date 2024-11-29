@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:51:42 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/26 21:49:22 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/28 14:44:58 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_hexalen(unsigned int nb)
 	int	i;
 
 	i = 0;
+	if (nb == 0)
+		return (1);
 	while (nb != 0)
 	{
 		i++;

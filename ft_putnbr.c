@@ -6,19 +6,23 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:45:46 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/26 15:47:14 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 01:11:18 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_nlen(int n)
+static int	ft_nlen(int n)
 {
 	int	i;
 
 	i = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
+		if (n == -2147483648)
+			return (11);
 		n *= -1;
 		i++;
 	}
@@ -32,18 +36,15 @@ int	ft_nlen(int n)
 
 int	ft_putnbr(int n)
 {
-	int	g;
-
-	g = n;
 	if (n == -2147483648)
 		ft_putstr ("-2147483648");
 	else if (n < 0)
 	{
 		ft_putchar ('-');
-		n *= -1;
+		n = -n;
 		ft_putnbr(n);
 	}
-	else if (n >= 0 && n <= 9)
+	else if (n >= '0' && n <= '9')
 	{
 		ft_putchar(n + 48);
 	}
@@ -52,5 +53,5 @@ int	ft_putnbr(int n)
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);
 	}
-	return (ft_nlen(g));
+	return (ft_nlen(n));
 }

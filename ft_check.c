@@ -6,29 +6,32 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:31:33 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/28 14:11:52 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 01:04:38 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_check(va_list args, char c)
+int	ft_check(va_list args, char c)
 {
+	int	i;
+
+	i = 0;
 	if (c == 'c')
-		ft_putchar((char)va_arg(args, int));
+		i = ft_putchar(va_arg(args, int));
 	else if (c == 's')
-		ft_putstr((char *)va_arg(args, int));
+		i = ft_putstr(va_arg(args, char *));
 	else if (c == 'd' || c == 'i')
-		ft_putnbr(va_arg(args, int));
+		i = ft_putnbr(va_arg(args, int));
 	else if (c == 'x')
-		ft_puthexa((unsigned int)va_arg(args, int), "0123456789abcdef");
+		i = ft_puthexa((unsigned int)va_arg(args, int), "0123456789abcdef");
 	else if (c == 'X')
-		ft_puthexa((unsigned int)va_arg(args, int), "0123456789ABCDEF");
+		i = ft_puthexa((unsigned int)va_arg(args, int), "0123456789ABCDEF");
 	else if (c == 'p')
-		
+		i = ft_puthexa((unsigned int)va_arg(args, int), "0123456789ABCDEF");
 	else if (c == 'u')
-		ft_putunbr((unsigned int)va_arg(args, int));
+		i = ft_putunbr((unsigned int)va_arg(args, int));
 	else if (c == '%')
-		putchar('%');
+		i = ft_putchar('%');
 	return (i);
 }

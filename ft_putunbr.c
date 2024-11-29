@@ -6,18 +6,18 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:50:09 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/27 09:54:36 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 01:11:51 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_unlen(unsigned int n)
+static int	ft_unlen(unsigned int n)
 {
 	int	i;
 
 	i = 0;
-	if (n >= 0 && n <= 9)
+	if (n == 0)
 		return (1);
 	while (n != 0)
 	{
@@ -29,10 +29,7 @@ int	ft_unlen(unsigned int n)
 
 int	ft_putunbr(unsigned int n)
 {
-	int	i;
-	int	len;
-
-	if (n >= 0 && n <= 9)
+	if (n >= '0' && n <= '9')
 		ft_putchar(n + 48);
 	else
 	{
