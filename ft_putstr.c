@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:08:28 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/29 15:01:29 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 19:46:12 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_putstr(char *s)
 	i = 0;
 	len = 0;
 	if (!s)
-		return (0);
+		return (ft_putstr("(null)"));
 	while (s[i])
 	{
 		valid_len = ft_putchar(s[i]);
