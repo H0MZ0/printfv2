@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:42:51 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/29 16:31:28 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 17:03:29 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,12 @@ int	ft_printf(const char *src, ...)
 	va_end(args);
 	return (len);
 }
-int main()
+
+#include <stdlib.h>
+
+int main(int ac, char **av)
 {
-	ft_printf("lkopiiii: %x\n", 500);
-	printf("original: %x\n", 500);
+	(void)ac;
+	ft_printf("lkopiiii: %X\n", atoi(av[1]));
+	printf("original: %X\n", atoi(av[1]));
 }
