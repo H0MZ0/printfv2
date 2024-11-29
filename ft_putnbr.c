@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:45:46 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/29 01:11:18 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 15:59:56 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_putnbr(int n)
 		n = -n;
 		ft_putnbr(n);
 	}
-	else if (n >= '0' && n <= '9')
+	else if (n >= 0 && n <= 9)
 	{
 		ft_putchar(n + 48);
 	}

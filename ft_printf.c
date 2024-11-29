@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:42:51 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/29 01:25:36 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 16:31:28 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	ft_printf(const char *src, ...)
 	{
 		if (src[i] != '%')
 		{
+			if (src[i] >= 0 && src[i] <= 9)
+				ft_putchar(src[i] + 48);
 			ft_putchar(src[i]);
 			len++;
 		}
@@ -39,4 +41,9 @@ int	ft_printf(const char *src, ...)
 	}
 	va_end(args);
 	return (len);
+}
+int main()
+{
+	ft_printf("lkopiiii: %x\n", 500);
+	printf("original: %x\n", 500);
 }

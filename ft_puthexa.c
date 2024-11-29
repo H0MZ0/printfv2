@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:41:17 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/29 01:05:03 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 16:30:51 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_puthexa(unsigned int nb, char *base)
 {
-	if (nb >= '0' && nb <= '9')
+	if (nb >= 0 && nb <= 9)
 	{
 		ft_putchar(nb + 48);
 		return (1);
@@ -26,7 +26,7 @@ int	ft_puthexa(unsigned int nb, char *base)
 	if (nb >= 16)
 	{
 		ft_puthexa(nb / 16, base);
-		ft_puthexa(nb % 16, base);
+		ft_puthexa(nb % 16,base);
 	}
 	return (ft_hexalen(nb));
 }
