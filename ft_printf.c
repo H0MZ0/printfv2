@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:42:51 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/29 01:03:37 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/29 01:25:36 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_printf(const char *src, ...)
 	len = 0;
 	i = 0;
 	va_start(args, src);
+	if (!src)
+		return (-1);
 	while (src[i] != '\0')
 	{
 		if (src[i] != '%')
