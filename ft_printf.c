@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:42:51 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/30 13:38:08 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/30 16:15:35 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,8 @@ int	ft_printf(const char *src, ...)
 	va_end(args);
 	return (len);
 }
-// int main(int ac, char **av)
+// int main()
 // {
-// 	(void)ac;
-// 	ft_printf("lkopiiii: %i\n", -101);
-// 	printf("original: %i\n", -101);
+// 	ft_printf("lkopiiii: %p\n", (void *)30);
+// 	printf("original: %p\n", (void *)30);
 // }
