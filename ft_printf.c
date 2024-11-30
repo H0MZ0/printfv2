@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:42:51 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/30 16:15:35 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/30 17:56:14 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ int	ft_printf(const char *src, ...)
 }
 // int main()
 // {
-// 	ft_printf("lkopiiii: %p\n", (void *)30);
-// 	printf("original: %p\n", (void *)30);
+// 	ft_printf("lkopiiii:%p %p ", ULONG_MAX, -ULONG_MAX);
+// 	printf("original:%p %p ", ULONG_MAX, -ULONG_MAX);
 // }

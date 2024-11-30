@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 17:50:35 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/30 16:16:52 by hakader          ###   ########.fr       */
+/*   Updated: 2024/11/30 17:52:35 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ int	ft_putad(long long src)
 	int	length;
 
 	length = 0;
+	if (src == 0)
+	{
+		ft_putstr("(nil)");
+		return (5);
+	}
 	ft_putstr("0x");
 	if (!src)
 		ft_putchar('0');
