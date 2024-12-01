@@ -6,14 +6,13 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 09:52:04 by hakader           #+#    #+#             */
-/*   Updated: 2024/12/01 10:39:16 by hakader          ###   ########.fr       */
+/*   Updated: 2024/12/01 12:00:08 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
 

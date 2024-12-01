@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 17:50:35 by hakader           #+#    #+#             */
-/*   Updated: 2024/12/01 11:43:35 by hakader          ###   ########.fr       */
+/*   Updated: 2024/12/01 19:58:47 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ static	int	ft_hexlen(unsigned long long nb)
 static int	ft_putexa(unsigned long long nb, char *base)
 {
 	if (nb == 0)
-	{
-		ft_putchar('0');
-		return (1);
-	}
+		return (ft_putchar('0'));
 	else if (nb > 0 && nb <= 15)
 		ft_putchar(base[nb]);
 	else
