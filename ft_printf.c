@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:42:51 by hakader           #+#    #+#             */
-/*   Updated: 2024/12/01 10:50:02 by hakader          ###   ########.fr       */
+/*   Updated: 2024/12/01 11:43:14 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,13 @@ int	ft_printf(const char *src, ...)
 		}
 		i++;
 	}
-	len++;
 	va_end(args);
 	return (len);
 }
+// int main()
+// {
+// 	int i = ft_printf("%p", 0);
+// 	ft_printf("\n%d\n",i);
+// 	int j = printf("%p", 0);
+// 	printf("\n%d\n",j);
+// }

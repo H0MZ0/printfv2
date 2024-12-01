@@ -6,11 +6,26 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 17:50:35 by hakader           #+#    #+#             */
-/*   Updated: 2024/12/01 10:41:05 by hakader          ###   ########.fr       */
+/*   Updated: 2024/12/01 11:43:35 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static	int	ft_hexlen(unsigned long long nb)
+{
+	int	i;
+
+	i = 0;
+	if (nb == 0)
+		return (1);
+	while (nb != 0)
+	{
+		i++;
+		nb /= 16;
+	}
+	return (i);
+}
 
 static int	ft_putexa(unsigned long long nb, char *base)
 {
@@ -26,7 +41,7 @@ static int	ft_putexa(unsigned long long nb, char *base)
 		ft_putexa(nb / 16, base);
 		ft_putexa(nb % 16, base);
 	}
-	return (ft_hexalen(nb));
+	return (ft_hexlen(nb));
 }
 
 int	ft_putad(long long src)
@@ -35,13 +50,10 @@ int	ft_putad(long long src)
 
 	length = 0;
 	if (src == 0)
-	{
-		ft_putstr("(nil)");
-		return (6);
-	}
+		return (ft_putstr("(nil)"));
 	ft_putstr("0x");
 	if (!src)
-		ft_putchar('0');
+		return (ft_putchar('0'));
 	else
 		length = ft_putexa(src, "0123456789abcdef");
 	return (length + 2);
