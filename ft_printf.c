@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:42:51 by hakader           #+#    #+#             */
-/*   Updated: 2024/11/30 17:56:14 by hakader          ###   ########.fr       */
+/*   Updated: 2024/12/01 10:45:04 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,12 @@ int	ft_printf(const char *src, ...)
 		i++;
 	}
 	va_end(args);
-	return (len);
+	return (len + 1);
 }
-// int main()
-// {
-// 	ft_printf("lkopiiii:%p %p ", ULONG_MAX, -ULONG_MAX);
-// 	printf("original:%p %p ", ULONG_MAX, -ULONG_MAX);
-// }
+#include <stdlib.h>
+int main()
+{
+	int a = ft_printf("lkopiii: %d\n", 98798);
+	int b = printf("original: %d\n", 98798);
+	printf("%d\n%d\n", a, b);
+}
