@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 09:52:04 by hakader           #+#    #+#             */
-/*   Updated: 2024/12/01 12:00:08 by hakader          ###   ########.fr       */
+/*   Updated: 2024/12/02 11:19:52 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ int		ft_puthexa(unsigned int nb, char *base);
 int		ft_putnbr(int n);
 int		ft_putstr(char *s);
 int		ft_putunbr(unsigned int n);
-int		ft_valid_format(char c);
 
 #endif
